@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion/styled": "^11.9.3",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.17.1",
     "gatsby-plugin-image": "^2.17.0",
@@ -27,8 +28,7 @@
     "gatsby-transformer-sharp": "^4.17.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.5"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
