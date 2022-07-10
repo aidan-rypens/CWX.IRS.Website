@@ -1,4 +1,11 @@
 html {
-  font-family: Poppins;
+  font-family: Articulat CF;
   font-display: swap;
+}
+
+h1 {
+  color: #034d89;
+  font-family: Articulat CF;
+  font-weight: normal;
+  font-size: 3rem;
 }
