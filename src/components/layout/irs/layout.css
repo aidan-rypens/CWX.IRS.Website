@@ -1,5 +1,5 @@
 html {
-  font-family: Articulat CF;
+  font-family: "Articulat CF ";
   font-display: swap;
 }
 
@@ -14,7 +14,7 @@ h6 {
 }
 
 h1 {
-  font-family: Articulat CF;
+  font-family: "Articulat CF";
   font-weight: normal;
   font-size: 3.75rem;
   color: #034d89;
@@ -26,22 +26,22 @@ h2 {
 }
 
 h3 {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-size: 2rem;
 }
 
 h4 {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-size: 1.25rem;
 }
 
 h5 {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-size: 0.875rem;
 }
 
 h6 {
-  font-family: Poppins;
+  font-family: "Poppins";
   font-size: 0.75rem;
 }
 
