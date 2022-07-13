@@ -1,6 +1,4 @@
 import React from "react";
-import "./layout.css";
-import "./../fonts/fonts.css";
 
 type Props = {
   children?: JSX.Element[] | JSX.Element;
