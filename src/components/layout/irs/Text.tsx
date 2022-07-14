@@ -4,12 +4,12 @@ import { TextType, TextWeight } from "../../../types";
 import { css, SerializedStyles } from "@emotion/react";
 
 type Props = {
-  type: TextType;
+  type?: TextType;
   weight?: TextWeight;
 };
 
 export function Text({
-  type,
+  type = "text-medium",
   weight = "text-weight-normal",
   ...props
 }: Props & ComponentPropsWithoutRef<"p">) {

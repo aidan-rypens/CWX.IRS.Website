@@ -5,6 +5,17 @@ import { Container } from "../components/layout/Container";
 import { Text } from "../components/layout/irs/Text";
 import { Row } from "../components/layout/Row";
 
+const text = "IRS België is een IT infrastructuur oplossingen provider.";
+const longText = `In presentations, you often require 'dummy text' to fill out the
+places where actual text will go once the money men buy it from some
+other overpriced consultant. Historically, this dummy text is a
+block of fake latin boilerplate that begins with 'Lorem Ipsum'. It
+fills up the space with sentences and paragraphs, but it's been used
+so long by so many that - like banner ads and tv commercials -
+people just gloss over it without paying any attention to the
+contents. Herein lies your opportunity to subvert the timeless
+standard.`;
+
 export default function Index() {
   return (
     <Container>
@@ -17,17 +28,17 @@ export default function Index() {
         </Column>
         <Column breakpoints={{ phone: 8 }}>
           <StyledSubItemTitle>H1</StyledSubItemTitle>
-          <h1>IRS België is een IT infrastructuur oplossingen provider.</h1>
+          <h1>{text}</h1>
           <StyledSubItemTitle>H2</StyledSubItemTitle>
-          <h2>IRS België is een IT infrastructuur oplossingen provider.</h2>
+          <h2>{text}</h2>
           <StyledSubItemTitle>H3</StyledSubItemTitle>
-          <h3>IRS België is een IT infrastructuur oplossingen provider.</h3>
+          <h3>{text}</h3>
           <StyledSubItemTitle>H4</StyledSubItemTitle>
-          <h4>IRS België is een IT infrastructuur oplossingen provider.</h4>
+          <h4>{text}</h4>
           <StyledSubItemTitle>H5</StyledSubItemTitle>
-          <h5>IRS België is een IT infrastructuur oplossingen provider.</h5>
+          <h5>{text}</h5>
           <StyledSubItemTitle>H6</StyledSubItemTitle>
-          <h6>IRS België is een IT infrastructuur oplossingen provider.</h6>
+          <h6>{text}</h6>
         </Column>
       </StyledRow>
       <StyledRow>
@@ -37,17 +48,7 @@ export default function Index() {
         <Column breakpoints={{ phone: 8 }}>
           <StyledSubtileDivider />
           <StyledSubItemTitle>paragraph</StyledSubItemTitle>
-          <StyledP>
-            In presentations, you often require 'dummy text' to fill out the
-            places where actual text will go once the money men buy it from some
-            other overpriced consultant. Historically, this dummy text is a
-            block of fake latin boilerplate that begins with 'Lorem Ipsum'. It
-            fills up the space with sentences and paragraphs, but it's been used
-            so long by so many that - like banner ads and tv commercials -
-            people just gloss over it without paying any attention to the
-            contents. Herein lies your opportunity to subvert the timeless
-            standard.
-          </StyledP>
+          <StyledP>{longText}</StyledP>
           <StyledSubItemTitle>links</StyledSubItemTitle>
           <a href="https://crossworx.be">Text link</a>
         </Column>
@@ -59,17 +60,7 @@ export default function Index() {
         <Column breakpoints={{ phone: 8 }}>
           <StyledSubtileDivider />
           <StyledSubItemTitle>.text-testimonials</StyledSubItemTitle>
-          <StyledTestimonials>
-            In presentations, you often require 'dummy text' to fill out the
-            places where actual text will go once the money men buy it from some
-            other overpriced consultant. Historically, this dummy text is a
-            block of fake latin boilerplate that begins with 'Lorem Ipsum'. It
-            fills up the space with sentences and paragraphs, but it's been used
-            so long by so many that - like banner ads and tv commercials -
-            people just gloss over it without paying any attention to the
-            contents. Herein lies your opportunity to subvert the timeless
-            standard.
-          </StyledTestimonials>
+          <StyledTestimonials>{longText}</StyledTestimonials>
         </Column>
       </StyledRow>
       <StyledRow>
@@ -92,6 +83,34 @@ export default function Index() {
           </StyledText>
           <StyledSubItemTitle>.text-small</StyledSubItemTitle>
           <StyledText type="text-small">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+        </Column>
+      </StyledRow>
+      <StyledRow>
+        <Column breakpoints={{ phone: 4 }}>
+          <StyledItemTitle>Text weights</StyledItemTitle>
+        </Column>
+        <Column breakpoints={{ phone: 8 }}>
+          <StyledSubtileDivider />
+          <StyledSubItemTitle>.text-weight-bold</StyledSubItemTitle>
+          <StyledText weight="text-weight-bold">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+          <StyledSubItemTitle>.text-weight-semibold</StyledSubItemTitle>
+          <StyledText weight="text-weight-semibold">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+          <StyledSubItemTitle>.text-weight-medium</StyledSubItemTitle>
+          <StyledText weight="text-weight-medium">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+          <StyledSubItemTitle>.text-weight-normal</StyledSubItemTitle>
+          <StyledText weight="text-weight-normal">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+          <StyledSubItemTitle>.text-weight-light</StyledSubItemTitle>
+          <StyledText weight="text-weight-light">
             Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
           </StyledText>
         </Column>
