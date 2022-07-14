@@ -79,9 +79,21 @@ export default function Index() {
         <Column breakpoints={{ phone: 8 }}>
           <StyledSubtileDivider />
           <StyledSubItemTitle>.text-xlarge</StyledSubItemTitle>
-          <Text as="text-xlarge">
+          <StyledText type="text-xlarge">
             Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
-          </Text>
+          </StyledText>
+          <StyledSubItemTitle>.text-large</StyledSubItemTitle>
+          <StyledText type="text-large">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+          <StyledSubItemTitle>.text-medium</StyledSubItemTitle>
+          <StyledText type="text-medium">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
+          <StyledSubItemTitle>.text-small</StyledSubItemTitle>
+          <StyledText type="text-small">
+            Fusce arcu ligula, dictum eget velit ac, aliquet fermentum turpis.
+          </StyledText>
         </Column>
       </StyledRow>
     </Container>
@@ -92,7 +104,7 @@ const StyledHeading = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   color: #034c87;
-  margin-bottom: 0.75rem;
+  margin: 1rem 0 1rem 0;
 `;
 
 const StyledSub = styled.p`
@@ -111,9 +123,9 @@ const StyledDivider = styled.div`
 
 const StyledSubtileDivider = styled.div`
   background: #eff6fc;
-  width: calc(100% - 3rem);
+  width: calc(100% - 2rem);
   height: 0.1rem;
-  margin: 1rem 0 3rem 3rem;
+  margin: 1rem 0rem 5rem 2rem;
 `;
 
 const StyledItemTitle = styled.p`
@@ -128,6 +140,7 @@ const StyledItemTitle = styled.p`
 
 const StyledSubItemTitle = styled(StyledItemTitle)`
   padding: 0.6rem 0.8rem;
+  margin-bottom: 1.5rem;
 `;
 
 const StyledRow = styled(Row)`
@@ -141,4 +154,8 @@ const StyledP = styled.p`
 const StyledTestimonials = styled.p`
   font-size: 1.14rem;
   font-weight: 700;
+`;
+
+const StyledText = styled(Text)`
+  margin-bottom: 4rem;
 `;

@@ -1,22 +1,27 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import styled from "@emotion/styled";
-import { Text as TextType } from "../../../types";
+import { TextType, TextWeight } from "../../../types";
 import { css, SerializedStyles } from "@emotion/react";
 
 type Props = {
-  as: TextType;
+  type: TextType;
+  weight?: TextWeight;
 };
 
-export function Text(props: Props & ComponentPropsWithoutRef<"p">) {
-  return <StyledText {...(props as any)} />;
+export function Text({
+  type,
+  weight = "text-weight-normal",
+  ...props
+}: Props & ComponentPropsWithoutRef<"p">) {
+  return <StyledText type={type} weight={weight} {...(props as any)} />;
 }
 
 const texts: Record<TextType, SerializedStyles> = {
   "text-small": css`
-    font-size: 1.14rem;
+    font-size: 0.875rem;
   `,
   "text-medium": css`
-    font-size: 0.8rem;
+    font-size: 1.25rem;
   `,
   "text-large": css`
     font-size: 1.5rem;
@@ -26,10 +31,28 @@ const texts: Record<TextType, SerializedStyles> = {
   `,
 };
 
+const weights: Record<TextWeight, SerializedStyles> = {
+  "text-weight-bold": css`
+    font-weight: 800;
+  `,
+  "text-weight-semibold": css`
+    font-weight: 700;
+  `,
+  "text-weight-medium": css`
+    font-weight: 500;
+  `,
+  "text-weight-normal": css`
+    font-weight: 400;
+  `,
+  "text-weight-light": css`
+    font-weight: 300;
+  `,
+};
+
 const StyledText = styled.span<Props>`
   position: relative;
   color: black;
   text-align: left;
-  font-weight: bold;
-  ${(props) => texts[props.as as TextType]};
+  ${(props) => texts[props.type as TextType]};
+  ${(props) => weights[props.weight as TextWeight]};
 `;
