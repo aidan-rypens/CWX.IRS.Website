@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import styled from "@emotion/styled";
-import { TextColor, TextStyle, TextType, TextWeight } from "../../../types";
+import { TextColor, TextStyle, TextType, TextWeight } from "../../types";
 import { css, SerializedStyles } from "@emotion/react";
 
 type Props = {

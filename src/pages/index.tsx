@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import React, { ReactNode } from "react";
-import { Column } from "../components/layout/Column";
-import { Container } from "../components/layout/Container";
-import { Text } from "../components/layout/irs/Text";
-import { Row } from "../components/layout/Row";
+import { Column } from "../layout/Column";
+import { Container } from "../layout/Container";
+import { Text } from "../layout/irs/Text";
+import { Row } from "../layout/Row";
 
 const text = "IRS België is een IT infrastructuur oplossingen provider.";
 const subHeadingText = `Wij ontzorgen middelgrote tot grote klanten met cash terminals, IT devices en oplossingen op maat.`;

@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React, { ComponentPropsWithoutRef } from "react";
 
-import { Breakpoints } from "../../types";
-import { forBreakpoints } from "./../../utils/forBreakpoints";
+import { Breakpoints } from "../types";
+import { forBreakpoints } from "../utils/forBreakpoints";
 
 type Props<T> = {
   as?: T;

@@ -1,4 +1,4 @@
 import "@fontsource/poppins/400.css";
 
-import "./src/fonts/fonts.css";
-import "./src/components/layout/irs/layout.css";
+import "./src/layout/irs/fonts/fonts.css";
+import "./src/layout/irs/layout.css";
