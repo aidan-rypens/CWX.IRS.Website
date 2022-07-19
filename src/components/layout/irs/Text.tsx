@@ -1,20 +1,40 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import styled from "@emotion/styled";
-import { TextType, TextWeight } from "../../../types";
+import { TextColor, TextStyle, TextType, TextWeight } from "../../../types";
 import { css, SerializedStyles } from "@emotion/react";
 
 type Props = {
   type?: TextType;
   weight?: TextWeight;
+  textStyle?: TextStyle;
+  color?: TextColor;
 };
 
 export function Text({
   type = "text-medium",
   weight = "text-weight-normal",
+  color,
+  style,
   ...props
 }: Props & ComponentPropsWithoutRef<"p">) {
-  return <StyledText type={type} weight={weight} {...(props as any)} />;
+  return (
+    <StyledText
+      type={type}
+      weight={weight}
+      textStyles={textStyles}
+      color={color}
+      {...(props as any)}
+    />
+  );
 }
+
+const textStyles: Record<TextStyle, SerializedStyles> = {
+  "text-style-subheading": css`
+    font-size: 1.56rem;
+    color: #034d89;
+    opacity: 0.42;
+  `,
+};
 
 const texts: Record<TextType, SerializedStyles> = {
   "text-small": css`
@@ -49,10 +69,24 @@ const weights: Record<TextWeight, SerializedStyles> = {
   `,
 };
 
+const colors: Record<TextColor, SerializedStyles> = {
+  "text-color-white": css`
+    color: white;
+  `,
+  "text-color-secondary": css`
+    color: #034c87;
+  `,
+  "text-color-accent": css`
+    color: #00a8ec;
+  `,
+};
+
 const StyledText = styled.span<Props>`
   position: relative;
   color: black;
   text-align: left;
   ${(props) => texts[props.type as TextType]};
   ${(props) => weights[props.weight as TextWeight]};
+  ${(props) => textStyles[props.textStyle as TextStyle]};
+  ${(props) => colors[props.color as TextColor]};
 `;

@@ -14,3 +14,10 @@ export type TextWeight =
   | "text-weight-medium"
   | "text-weight-normal"
   | "text-weight-light";
+
+export type TextStyle = "text-style-subheading";
+
+export type TextColor =
+  | "text-color-white"
+  | "text-color-secondary"
+  | "text-color-accent";
