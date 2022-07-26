@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { ReactNode } from "react";
+import React from "react";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
 import { Text } from "../layout/irs/Text";
@@ -17,6 +17,43 @@ so long by so many that - like banner ads and tv commercials -
 people just gloss over it without paying any attention to the
 contents. Herein lies your opportunity to subvert the timeless
 standard.`;
+
+type ColorItem = {
+  color: string;
+  text: string;
+};
+
+const colorBoxes: ColorItem[] = [
+  {
+    color: "#1D1D1D",
+    text: "Text",
+  },
+  {
+    color: "#EFF6FC",
+    text: "Light background",
+  },
+  {
+    color: "#F9F9F9",
+    text: "Primary",
+  },
+  {
+    color: "#034C87",
+    text: "Secondary",
+  },
+  {
+    color: "#00A8EC",
+    text: "Accent",
+  },
+  {
+    color: "#00A8EC",
+    text: "Button hover state",
+  },
+];
+
+const otherColorBoxes: ColorItem = {
+  color: "#034C87",
+  text: "Borders",
+};
 
 export default function Index() {
   return (
@@ -131,6 +168,39 @@ export default function Index() {
           <StyledText color="text-color-accent">{shortLorum}</StyledText>
         </Column>
       </StyledRow>
+      <StyledRow>
+        <Column breakpoints={{ phone: 4 }}>
+          <StyledItemTitle>Common colors</StyledItemTitle>
+        </Column>
+        <Column breakpoints={{ phone: 8 }}>
+          <StyledSubtileDivider />
+          <StyledColorBoxesGrid>
+            {colorBoxes.map((cb) => (
+              <StyledColorBox key={cb.text} color={cb.color}>
+                <StyledColorBoxNotation>{cb.text}</StyledColorBoxNotation>
+              </StyledColorBox>
+            ))}
+          </StyledColorBoxesGrid>
+        </Column>
+      </StyledRow>
+      <StyledRow>
+        <Column breakpoints={{ phone: 4 }}>
+          <StyledItemTitle>Other colors</StyledItemTitle>
+        </Column>
+        <Column breakpoints={{ phone: 8 }}>
+          <StyledSubtileDivider />
+          <StyledColorBoxesGrid>
+            <StyledColorBox
+              key={otherColorBoxes.text}
+              color={otherColorBoxes.color}
+            >
+              <StyledColorBoxNotation>
+                {otherColorBoxes.text}
+              </StyledColorBoxNotation>
+            </StyledColorBox>
+          </StyledColorBoxesGrid>
+        </Column>
+      </StyledRow>
     </Container>
   );
 }
@@ -203,4 +273,30 @@ const StyledTextColorWhiteBox = styled.div`
   background: #034c87;
   padding: 1rem;
   margin-bottom: 4rem;
+`;
+
+const StyledColorBox = styled.div<{ color: string }>`
+  background-color: ${(props) => props.color};
+  width: 14rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+`;
+
+const StyledColorBoxesGrid = styled.div`
+  display: flex;
+  flex-direction: row;
+  grid-gap: 2rem;
+  flex-wrap: wrap;
+`;
+
+const StyledColorBoxNotation = styled.div`
+  position: relative;
+  font-family: "Poppins";
+  font-weight: bold;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 1rem;
+  width: fit-content;
+  color: #034c87;
+  background-color: #eff6fc;
 `;
