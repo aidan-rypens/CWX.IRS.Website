@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { bgBlue, bgDark, bgGrey, bgWhite } from "../constants";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
 import { Text } from "../layout/irs/Text";
@@ -54,6 +55,25 @@ const otherColorBoxes: ColorItem = {
   color: "#034C87",
   text: "Borders",
 };
+
+const backgroundColorClasses: ColorItem[] = [
+  {
+    color: bgDark,
+    text: "background-color-dark",
+  },
+  {
+    color: bgWhite,
+    text: "background-color-white",
+  },
+  {
+    color: bgBlue,
+    text: "background-color-blue",
+  },
+  {
+    color: bgGrey,
+    text: "background-color-grey",
+  },
+];
 
 export default function Index() {
   return (
@@ -201,6 +221,35 @@ export default function Index() {
           </StyledColorBoxesGrid>
         </Column>
       </StyledRow>
+      <StyledRow>
+        <Column breakpoints={{ phone: 4 }}>
+          <StyledItemTitle>Background color classes</StyledItemTitle>
+        </Column>
+        <Column breakpoints={{ phone: 8 }}>
+          <StyledSubtileDivider />
+          <StyledColorBoxesGrid>
+            {backgroundColorClasses.map((bcc) => {
+              const { text, color } = bcc;
+              return (
+                <div key={bcc.text}>
+                  <StyledColorNotation>{text}</StyledColorNotation>
+                  <StyledColorBox color={color} />
+                </div>
+              );
+            })}
+          </StyledColorBoxesGrid>
+        </Column>
+      </StyledRow>
+      <StyledRow>
+        <Column breakpoints={{ phone: 4 }}>
+          <StyledItemTitle>Buttons</StyledItemTitle>
+        </Column>
+        <Column breakpoints={{ phone: 8 }}>
+          <StyledSubtileDivider />
+          <StyledColorNotation>Button</StyledColorNotation>
+          <StyledColorNotation>Inverted buttons</StyledColorNotation>
+        </Column>
+      </StyledRow>
     </Container>
   );
 }
@@ -299,4 +348,14 @@ const StyledColorBoxNotation = styled.div`
   width: fit-content;
   color: #034c87;
   background-color: #eff6fc;
+`;
+
+const StyledColorNotation = styled.div`
+  font-family: "Poppins";
+  font-weight: bold;
+  background-color: #eff6fc;
+  color: #034c87;
+  width: fit-content;
+  padding: 0.25rem 1rem;
+  margin-bottom: 2rem;
 `;
