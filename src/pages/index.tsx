@@ -232,7 +232,7 @@ export default function Index() {
               const { text, color } = bcc;
               return (
                 <div key={bcc.text}>
-                  <StyledColorNotation>{text}</StyledColorNotation>
+                  <StyledSmallNotation>{text}</StyledSmallNotation>
                   <StyledColorBox color={color} />
                 </div>
               );
@@ -246,8 +246,8 @@ export default function Index() {
         </Column>
         <Column breakpoints={{ phone: 8 }}>
           <StyledSubtileDivider />
-          <StyledColorNotation>Button</StyledColorNotation>
-          <StyledColorNotation>Inverted buttons</StyledColorNotation>
+          <StyledSmallNotation>Button</StyledSmallNotation>
+          <StyledSmallNotation>Inverted buttons</StyledSmallNotation>
         </Column>
       </StyledRow>
     </Container>
@@ -350,7 +350,7 @@ const StyledColorBoxNotation = styled.div`
   background-color: #eff6fc;
 `;
 
-const StyledColorNotation = styled.div`
+const StyledSmallNotation = styled.div`
   font-family: "Poppins";
   font-weight: bold;
   background-color: #eff6fc;
