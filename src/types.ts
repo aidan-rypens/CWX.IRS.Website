@@ -21,3 +21,9 @@ export type TextColor =
   | "text-color-white"
   | "text-color-secondary"
   | "text-color-accent";
+
+export type Button =
+  | "button-normal"
+  | "button-secondary"
+  | "button-invert-colors"
+  | "button-secondary-invert-colors";

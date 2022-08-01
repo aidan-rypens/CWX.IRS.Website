@@ -3,6 +3,7 @@ import React from "react";
 import { bgBlue, bgDark, bgGrey, bgWhite } from "../constants";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
+import { Button } from "../layout/irs/Button";
 import { Text } from "../layout/irs/Text";
 import { Row } from "../layout/Row";
 
@@ -246,8 +247,19 @@ export default function Index() {
         </Column>
         <Column breakpoints={{ phone: 8 }}>
           <StyledSubtileDivider />
-          <StyledSmallNotation>Button</StyledSmallNotation>
-          <StyledSmallNotation>Inverted buttons</StyledSmallNotation>
+          <StyledSmallNotation>normal buttons</StyledSmallNotation>
+          <StyledButtons>
+            <Button mode="button-normal" text=".button" />
+            <Button mode="button-secondary" text=".button-secondary" />
+          </StyledButtons>
+          <StyledSmallNotation>inverted buttons</StyledSmallNotation>
+          <StyledInvertedButtons>
+            <Button mode="button-invert-colors" text="button.invert-colors" />
+            <Button
+              mode="button-secondary-invert-colors"
+              text="button-secondary.invert-colors"
+            />
+          </StyledInvertedButtons>
         </Column>
       </StyledRow>
     </Container>
@@ -358,4 +370,23 @@ const StyledSmallNotation = styled.div`
   width: fit-content;
   padding: 0.25rem 1rem;
   margin-bottom: 2rem;
+`;
+
+const StyledButtons = styled.div`
+  display: flex;
+  button:first-of-type {
+    margin-right: 2rem;
+  }
+  margin-bottom: 10rem;
+`;
+
+const StyledInvertedButtons = styled.div`
+  display: flex;
+  background: #034c87;
+  padding: 1.5rem;
+  border-radius: 0.35rem;
+  width: fit-content;
+  button:first-of-type {
+    margin-right: 1rem;
+  }
 `;
