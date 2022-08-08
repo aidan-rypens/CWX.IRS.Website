@@ -59,6 +59,7 @@ const StyledButton = styled.button<Props>`
   font-size: 1rem;
   letter-spacing: 0.05rem;
   border: none;
+  cursor: pointer;
   padding: ${(props) =>
     props.iconOnly ? "0" : props.icon ? "0 1rem 0 0" : ".5rem 2.5rem"};
   border-radius: ${(props) => (props.iconOnly ? "50%" : "0")};

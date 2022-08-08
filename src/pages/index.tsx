@@ -1,11 +1,17 @@
 import styled from "@emotion/styled";
-import React from "react";
+import React, { ReactNode } from "react";
 import { bgBlue, bgDark, bgGrey, bgWhite } from "../constants";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
 import { Button } from "../layout/irs/Button";
 import { Text } from "../layout/irs/Text";
 import { Row } from "../layout/Row";
+
+import facebook from "./../layout/irs/icons/icon-facebook.svg";
+import instagram from "./../layout/irs/icons/icon-instagram.svg";
+import linkedin from "./../layout/irs/icons/icon-linkedin.svg";
+import twitter from "./../layout/irs/icons/icon-twitter.svg";
+import youtube from "./../layout/irs/icons/icon-youtube.svg";
 
 const text = "IRS België is een IT infrastructuur oplossingen provider.";
 const subHeadingText = `Wij ontzorgen middelgrote tot grote klanten met cash terminals, IT devices en oplossingen op maat.`;
@@ -73,6 +79,32 @@ const backgroundColorClasses: ColorItem[] = [
   {
     color: bgGrey,
     text: "background-color-grey",
+  },
+];
+
+const icons: {
+  label: string;
+  icon: string;
+}[] = [
+  {
+    label: "Facebook",
+    icon: facebook,
+  },
+  {
+    label: "Instagram",
+    icon: instagram,
+  },
+  {
+    label: "Twitter",
+    icon: twitter,
+  },
+  {
+    label: "Linkedin",
+    icon: linkedin,
+  },
+  {
+    label: "Youtube",
+    icon: youtube,
   },
 ];
 
@@ -262,6 +294,26 @@ export default function Index() {
           </StyledInvertedButtons>
         </Column>
       </StyledRow>
+      <StyledRow>
+        <Column breakpoints={{ phone: 4 }}>
+          <StyledItemTitle>Buttons</StyledItemTitle>
+        </Column>
+        <Column breakpoints={{ phone: 8 }}>
+          <StyledSubtileDivider />
+          <StyledColorBoxesGrid>
+            {icons.map((i) => {
+              const { label, icon } = i;
+
+              return (
+                <StyledIconBox>
+                  <StyledSmallNotation>{label}</StyledSmallNotation>
+                  <StyledIcon src={icon} alt={label} />
+                </StyledIconBox>
+              );
+            })}
+          </StyledColorBoxesGrid>
+        </Column>
+      </StyledRow>
     </Container>
   );
 }
@@ -389,4 +441,15 @@ const StyledInvertedButtons = styled.div`
   button:first-of-type {
     margin-right: 1rem;
   }
+`;
+
+const StyledIconBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 7rem;
+`;
+
+const StyledIcon = styled.img`
+  width: 2rem;
 `;

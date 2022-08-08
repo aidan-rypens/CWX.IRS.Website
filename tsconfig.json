@@ -106,6 +106,7 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*",
+    "./custom.d.ts",
     "gatsby-browser.ts"
   ]
 }
