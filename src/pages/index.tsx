@@ -111,40 +111,6 @@ const icons: {
 export default function Index() {
   return (
     <Container>
-      <StyledHeading>Styleguide Guide.</StyledHeading>
-      <StyledSub>Nicholas Van Beylen - Crossworx</StyledSub>
-      <StyledDivider />
-      <StyledRow>
-        <Column breakpoints={{ phone: 4 }}>
-          <StyledItemTitle>HTML Heading Tags</StyledItemTitle>
-        </Column>
-        <Column breakpoints={{ phone: 8 }}>
-          <StyledSubItemTitle>H1</StyledSubItemTitle>
-          <h1>{text}</h1>
-          <StyledSubItemTitle>H2</StyledSubItemTitle>
-          <h2>{text}</h2>
-          <StyledSubItemTitle>H3</StyledSubItemTitle>
-          <h3>{text}</h3>
-          <StyledSubItemTitle>H4</StyledSubItemTitle>
-          <h4>{text}</h4>
-          <StyledSubItemTitle>H5</StyledSubItemTitle>
-          <h5>{text}</h5>
-          <StyledSubItemTitle>H6</StyledSubItemTitle>
-          <h6>{text}</h6>
-        </Column>
-      </StyledRow>
-      <StyledRow>
-        <Column breakpoints={{ phone: 4 }}>
-          <StyledItemTitle>Other html tags</StyledItemTitle>
-        </Column>
-        <Column breakpoints={{ phone: 8 }}>
-          <StyledSubtileDivider />
-          <StyledSubItemTitle>paragraph</StyledSubItemTitle>
-          <StyledP>{longLorum}</StyledP>
-          <StyledSubItemTitle>links</StyledSubItemTitle>
-          <a href="https://crossworx.be">Text link</a>
-        </Column>
-      </StyledRow>
       <StyledRow>
         <Column breakpoints={{ phone: 4 }}>
           <StyledItemTitle>Testimonials</StyledItemTitle>
