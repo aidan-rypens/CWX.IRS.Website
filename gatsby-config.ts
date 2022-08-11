@@ -3,14 +3,12 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   pathPrefix: ``,
   siteMetadata: {
-    title: `IRSWebsite`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `IRS Website`,
+    description: `Custom-made Store & ICT Solutions`,
+    siteUrl: `https://www.irs-belgium.com/`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-react-helmet", "gatsby-plugin-sitemap"],
+  plugins: ["gatsby-plugin-sitemap"],
 };
 
 export default config;

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { HeadProps } from "gatsby";
 import React, { ReactNode } from "react";
 import { bgBlue, bgDark, bgGrey, bgWhite } from "../constants";
 import { Column } from "../layout/Column";
@@ -6,6 +7,7 @@ import { Container } from "../layout/Container";
 import { Button } from "../layout/irs/Button";
 import { Text } from "../layout/irs/Text";
 import { Row } from "../layout/Row";
+import { SEO } from "../SEO";
 
 import facebook from "./../layout/irs/icons/icon-facebook.svg";
 import instagram from "./../layout/irs/icons/icon-instagram.svg";
@@ -108,6 +110,10 @@ const icons: {
   },
 ];
 
+export function Head(props: HeadProps) {
+  return <SEO {...props} />;
+}
+
 export default function Index() {
   return (
     <Container>
@@ -122,7 +128,7 @@ export default function Index() {
           <StyledSubItemTitle>H1</StyledSubItemTitle>
           <h1>{text}</h1>
           <StyledSubItemTitle>H2</StyledSubItemTitle>
-          <h2>{text}</h2>
+          <StyledH2>{text}</StyledH2>
           <StyledSubItemTitle>H3</StyledSubItemTitle>
           <h3>{text}</h3>
           <StyledSubItemTitle>H4</StyledSubItemTitle>
@@ -305,7 +311,7 @@ export default function Index() {
               const { label, icon } = i;
 
               return (
-                <StyledIconBox>
+                <StyledIconBox key={label}>
                   <StyledSmallNotation>{label}</StyledSmallNotation>
                   <StyledIcon src={icon} alt={label} />
                 </StyledIconBox>
@@ -370,8 +376,8 @@ const StyledP = styled.p`
 `;
 
 const StyledTestimonials = styled.p`
-  font-size: 1.14rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
 `;
 
 const StyledText = styled(Text)`
@@ -441,6 +447,10 @@ const StyledInvertedButtons = styled.div`
   button:first-of-type {
     margin-right: 1rem;
   }
+`;
+
+const StyledH2 = styled.h2`
+  margin-bottom: 6rem;
 `;
 
 const StyledIconBox = styled.div`

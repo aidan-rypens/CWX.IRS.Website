@@ -18,12 +18,10 @@
   "dependencies": {
     "@emotion/styled": "^11.9.3",
     "@fontsource/poppins": "^4.5.8",
-    "gatsby": "^4.17.2",
-    "gatsby-plugin-react-helmet": "^5.17.0",
+    "gatsby": "^4.20.0",
     "gatsby-plugin-sitemap": "^5.17.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0"
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",

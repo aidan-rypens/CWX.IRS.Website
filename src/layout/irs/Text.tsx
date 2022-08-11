@@ -41,7 +41,7 @@ const texts: Record<TextType, SerializedStyles> = {
     font-size: 0.875rem;
   `,
   "text-medium": css`
-    font-size: 1.25rem;
+    font-size: 1rem;
   `,
   "text-large": css`
     font-size: 1.5rem;
