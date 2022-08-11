@@ -6,8 +6,3 @@ export const breakpoints: Record<Breakpoint, number> = {
   laptop: 56.25,
   desktop: 75,
 };
-
-export const bgDark = "#034C87";
-export const bgWhite = "#FFFFFF";
-export const bgBlue = "#EFF6FC";
-export const bgGrey = "#F9F9F9";

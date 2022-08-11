@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
 import { HeadProps } from "gatsby";
-import React, { ReactNode } from "react";
-import { bgBlue, bgDark, bgGrey, bgWhite } from "../constants";
+import React from "react";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
-import { Button } from "../layout/irs/Button";
-import { Text } from "../layout/irs/Text";
+import { Button } from "../layout/Button";
+import { Text } from "../layout/Text";
 import { Row } from "../layout/Row";
 import { SEO } from "../SEO";
 
@@ -14,6 +13,12 @@ import instagram from "./../layout/irs/icons/icon-instagram.svg";
 import linkedin from "./../layout/irs/icons/icon-linkedin.svg";
 import twitter from "./../layout/irs/icons/icon-twitter.svg";
 import youtube from "./../layout/irs/icons/icon-youtube.svg";
+import {
+  bgDark,
+  bgWhite,
+  bgBlue,
+  bgGrey,
+} from "../layout/irs/irs.theme.constants";
 
 const text = "IRS België is een IT infrastructuur oplossingen provider.";
 const subHeadingText = `Wij ontzorgen middelgrote tot grote klanten met cash terminals, IT devices en oplossingen op maat.`;

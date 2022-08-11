@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { css, SerializedStyles } from "@emotion/react";
 import React, { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react";
-import { Button as ButtonType } from "./../../types";
+import { Button as ButtonType } from "../types";
+import { buttons } from "./irs/irs.theme.constants";
 
 type Props = {
   as?: keyof JSX.IntrinsicElements;
@@ -29,27 +29,6 @@ export const Button = forwardRef<
     </StyledButton>
   );
 });
-
-const buttons: Record<ButtonType, SerializedStyles> = {
-  "button-normal": css`
-    background-color: #034c87;
-    color: white;
-  `,
-  "button-secondary": css`
-    background-color: white;
-    color: #034d89;
-    border: 4px solid #034c87;
-  `,
-  "button-invert-colors": css`
-    background-color: white;
-    color: #034c87;
-  `,
-  "button-secondary-invert-colors": css`
-    background-color: #034d89;
-    color: white;
-    border: 4px solid white;
-  `,
-};
 
 const StyledButton = styled.button<Props>`
   display: flex;
